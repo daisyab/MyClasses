@@ -14,14 +14,14 @@
     import java.io.IOException;
     import static java.lang.System.exit;
     import java.util.ArrayList;
-import java.util.Locale;
+    import java.util.Locale;
     import java.util.logging.Level;
     import java.util.logging.Logger;
     import javax.tools.JavaFileManager;
     import javax.tools.JavaFileObject;
-import javax.tools.StandardJavaFileManager;
-import javax.tools.StandardLocation;
-import static javax.tools.StandardLocation.CLASS_PATH;
+    import javax.tools.StandardJavaFileManager;
+    import javax.tools.StandardLocation;
+    import static javax.tools.StandardLocation.CLASS_PATH;
     import static javax.tools.StandardLocation.SOURCE_OUTPUT;
     import static javax.tools.StandardLocation.SOURCE_PATH;
     import javax.tools.ToolProvider;
@@ -49,11 +49,11 @@ import static javax.tools.StandardLocation.CLASS_PATH;
                
                 JavaFileObject compilationUnits = stdFileManager.getJavaFileForInput(SOURCE_PATH, "GeneratedClass.java", JavaFileObject.Kind.SOURCE);
                 
-                System.out.printf("%s", compilationUnits); 
+               // System.out.printf("%s", compilationUnits); 
        
                 MyClass cy = new MyClass(contexts);
                 
-                cy.parse(compilationUnits); //line 46                
+                cy.parse(compilationUnits); //line 45                
                 
             } catch (IOException ex) {
                 System.out.println("Exception thrown  :" + ex);
@@ -64,7 +64,7 @@ import static javax.tools.StandardLocation.CLASS_PATH;
 
         @Override
         public JCTree.JCCompilationUnit parse(JavaFileObject filename){
-            return super.parse(filename); //line 57
+            return super.parse(filename); //line 56
         }     
 
         @Override
